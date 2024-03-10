@@ -1,13 +1,7 @@
 package main
 
-import (
-	"ConsolePasswordManager/core"
-	"ConsolePasswordManager/core/database"
-)
+import "ConsolePasswordManager/manager"
 
 func main() {
-	result := core.CreateHashMasterPassword("test_password")
-	testValid := core.CheckMasterPasswordValid("test_password", result)
-	println(testValid)
-	database.GetOrCreateMasterPassword()
+	manager.Entry()
 }
